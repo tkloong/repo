@@ -39,7 +39,7 @@
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Optimization</h3>
-<p> Instead of directly solving a large sparse linear system, we can first sample down the target image, solve these small linear system, and then scale up the image.</p>
+<p> Instead of directly solving a large sparse linear system, we use multigrid method to solve a hierarchical of differential equation. Concretely, we first sample down the target image, solve these small linear system, and then scale up the image. By using GPU, the speedup is significant. For example, a 1024x639 pixel of target patch is seemlessly clone in average 0.001525s. The cloning result is below.</p>
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h3>
